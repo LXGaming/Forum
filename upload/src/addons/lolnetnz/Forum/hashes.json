@@ -1,6 +1,6 @@
 {
     "src/addons/lolnetnz/Forum/addon.json": "1ce2249093ab3210126bc7992413a2dc1b30249b443a5a37cefa07c3960aa079",
-    "src/addons/lolnetnz/Forum/Callback.php": "bcbfb7341c2b5be4c4c2191c6cfc090a8da99f2bf1d432b3c27a5d3237102445",
+    "src/addons/lolnetnz/Forum/Callback.php": "6622ff00a4a3a24fcbc2bc3c81c0555fa98b0977848976ba906b806a495145ca",
     "src/addons/lolnetnz/Forum/logo.png": "02df2795513152cac3ef2eea2053cebc12d29809d1d2999c58c53847e6120338",
     "src/addons/lolnetnz/Forum/Setup.php": "be77ce1b8559f8c601e4104f1de6e29575e8a38589907dc3068ff5f66d3ed022",
     "src/addons/lolnetnz/Forum/Util/Mojang.php": "8f157e995f87b9ed625979ebd80ef59280991edbf7aa29c6730d5868d0e8c6cf",

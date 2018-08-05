@@ -2,7 +2,7 @@
 
 namespace lolnetnz\Forum;
 
-use lolnetnz\Link\Forum\Mojang;
+use lolnetnz\Forum\Util\Mojang;
 
 class Callback {
 
