@@ -1,0 +1,14 @@
+{
+    "legacy_addon_id": "",
+    "title": "Lolnet - Forum",
+    "description": "",
+    "version_id": 1000070,
+    "version_string": "1.0.0",
+    "dev": "LX_Gaming",
+    "dev_url": "https://github.com/lolnetnz/Forum",
+    "faq_url": "https://github.com/lolnetnz/Forum/wiki",
+    "support_url": "https://github.com/lolnetnz/Forum/issues",
+    "extra_urls": [],
+    "require": [],
+    "icon": "logo.png"
+}
