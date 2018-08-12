@@ -64,22 +64,22 @@ class Callback {
 	}
 
 	public static function isAvailable(\XF\CustomField\Definition $definition, &$value, &$error) {
-		$finder = \XF::finder("XF:UserFieldValue");
-
-		$field = $finder->where("field_id", $definition->field_id)->where("field_value", $value)->fetchOne();
-		if (!$field) {
+		$fieldValue = \XF::em()->findOne("XF:UserFieldValue", ["field_id" => $definition->field_id, "field_value" => $value]);
+		if (!$fieldValue) {
 			return true;
 		}
 
-		$finder = \XF::finder("XF:User");
-		$user = $finder->where("user_id", $field->user_id)->fetchOne();
-		$visitor = \XF::visitor();
-
-		if ($user && $visitor && $user->user_id === $visitor->user_id) {
-			return true;
-		}
-
+		$user = \XF::em()->findOne("XF:User", ["user_id" => $fieldValue->user_id]);
 		if ($user) {
+			$visitor = \XF::visitor();
+			if ($user->user_id === $visitor->user_id) {
+				return true;
+			}
+
+			if ($user->canEdit()) {
+				return true;
+			}
+
 			$error = \XF::phrase($definition->field_id . "_duplicate", ["username" => $user->username]);
 		} else {
 			$error = \XF::phrase($definition->field_id . "_duplicate", ["username" => "Unknown"]);
