@@ -1,6 +1,6 @@
 <?php
 
-namespace lolnetnz\Forum\XF\Payment;
+namespace lolnetnz\Forum\Payment;
 
 use XF\Entity\PurchaseRequest;
 use XF\Purchasable\Purchase;
