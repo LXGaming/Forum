@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <phrases>
-  <phrase title="con_acc.Discord" version_id="1010070" version_string="1.1.0"><![CDATA[Discord]]></phrase>
-  <phrase title="con_acc_desc.Discord" version_id="1010070" version_string="1.1.0"><![CDATA[]]></phrase>
+  <phrase title="con_acc.discord" version_id="1010070" version_string="1.1.0"><![CDATA[Discord]]></phrase>
+  <phrase title="con_acc_desc.discord" version_id="1010070" version_string="1.1.0"><![CDATA[]]></phrase>
   <phrase title="con_acc_discord_client_id_explain" version_id="1010070" version_string="1.1.0"><![CDATA[The client ID that is associated with your <a href="https://discordapp.com/developers/applications" target="_blank">Discord developer application</a> for this domain.]]></phrase>
   <phrase title="con_acc_discord_client_secret_explain" version_id="1010070" version_string="1.1.0"><![CDATA[The secret for the Discord application you created for this domain.]]></phrase>
   <phrase title="discordid_duplicate" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[The Discord Id provided is already being used by {username}]]></phrase>

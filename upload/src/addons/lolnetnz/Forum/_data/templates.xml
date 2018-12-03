@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <templates>
-  <template type="admin" title="connected_account_provider_Discord" version_id="1010070" version_string="1.1.0"><![CDATA[<xf:textboxrow name="options[client_id]" value="{$options.client_id}"
+  <template type="admin" title="connected_account_provider_discord" version_id="1010070" version_string="1.1.0"><![CDATA[<xf:textboxrow name="options[client_id]" value="{$options.client_id}"
 	label="{{ phrase('client_id') }}"
 	hint="{{ phrase('required') }}"
 	explain="{{ phrase('con_acc_discord_client_id_explain') }}" />
@@ -9,7 +9,7 @@
 	label="{{ phrase('client_secret') }}"
 	hint="{{ phrase('required') }}"
 	explain="{{ phrase('con_acc_discord_client_secret_explain') }}" />]]></template>
-  <template type="admin" title="connected_account_provider_test_Discord" version_id="1010070" version_string="1.1.0"><![CDATA[<xf:if is="!$providerData">
+  <template type="admin" title="connected_account_provider_test_discord" version_id="1010070" version_string="1.1.0"><![CDATA[<xf:if is="!$providerData">
 	<xf:macro template="connected_account_provider_test_macros" name="explain"
 		arg-providerTitle="{$provider.title}"
 		arg-keyName="{{ phrase('client_id') }}"
@@ -23,7 +23,7 @@
 	<xf:macro template="connected_account_provider_test_macros" name="picture"
 		arg-url="https://cdn.discordapp.com/avatars/{$providerData.id}/{$providerData.avatar}.jpg" />
 </xf:if>]]></template>
-  <template type="public" title="connected_account_associated_Discord" version_id="1010070" version_string="1.1.0"><![CDATA[<xf:if is="$providerData.avatar">
+  <template type="public" title="connected_account_associated_discord" version_id="1010070" version_string="1.1.0"><![CDATA[<xf:if is="$providerData.avatar">
 	<img src="https://cdn.discordapp.com/avatars/{$providerData.id}/{$providerData.avatar}.jpg" width="48" alt="" />
 </xf:if>
 

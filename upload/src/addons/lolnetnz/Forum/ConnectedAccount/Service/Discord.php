@@ -49,9 +49,9 @@ class Discord extends AbstractService {
         $token->setAccessToken($data["access_token"]);
         unset($data["access_token"]);
 
-        if (isset($data["expires"])) {
-            $token->setLifeTime($data["expires"]);
-            unset($data["expires"]);
+        if (isset($data["expires_in"])) {
+            $token->setLifeTime($data["expires_in"]);
+            unset($data["expires_in"]);
         }
 
         if (isset($data["refresh_token"])) {
@@ -60,11 +60,11 @@ class Discord extends AbstractService {
         }
 
         $token->setExtraParams($data);
-        
+
         return $token;
     }
 
     protected function getExtraOAuthHeaders() {
-        return array('Accept' => 'application/json');
+        return array("Accept" => "application/json");
     }
 }

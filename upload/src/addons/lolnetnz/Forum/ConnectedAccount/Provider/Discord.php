@@ -22,8 +22,8 @@ class Discord extends AbstractProvider {
         return [
             "key" => $provider->options["client_id"],
             "secret" => $provider->options["client_secret"],
-            "redirect" => $redirectUri ?: $this->getRedirectUri($provider),
             "grant_type" => "code",
+            "redirect" => $redirectUri ?: $this->getRedirectUri($provider),
             "scopes" => [
                 \lolnetnz\Forum\ConnectedAccount\Service\Discord::SCOPE_IDENTIFY
             ]

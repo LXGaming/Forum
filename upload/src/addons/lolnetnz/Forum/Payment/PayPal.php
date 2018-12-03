@@ -7,9 +7,9 @@ use XF\Purchasable\Purchase;
 
 class PayPal extends XFCP_PayPal {
 
-	protected function getPaymentParams(PurchaseRequest $purchaseRequest, Purchase $purchase) {
-		$params = parent::getPaymentParams($purchaseRequest, $purchase);
-		$params["cmd"] = "_donations";
-		return $params;
-	}
+    protected function getPaymentParams(PurchaseRequest $purchaseRequest, Purchase $purchase) {
+        $params = parent::getPaymentParams($purchaseRequest, $purchase);
+        $params["cmd"] = "_donations";
+        return $params;
+    }
 }
