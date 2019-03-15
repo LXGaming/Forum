@@ -1,2 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<options/>
+<options>
+  <option option_id="lolnetnzForumRedisEnabled" edit_format="onoff" data_type="boolean">
+    <default_value>false</default_value>
+    <relation group_id="lolnetnzForum" display_order="1"/>
+  </option>
+  <option option_id="lolnetnzForumRedisHost" edit_format="textbox" data_type="string">
+    <default_value>127.0.0.1</default_value>
+    <relation group_id="lolnetnzForum" display_order="2"/>
+  </option>
+  <option option_id="lolnetnzForumRedisPassword" edit_format="textbox" data_type="string">
+    <default_value></default_value>
+    <relation group_id="lolnetnzForum" display_order="4"/>
+  </option>
+  <option option_id="lolnetnzForumRedisPort" edit_format="textbox" data_type="integer">
+    <default_value>6379</default_value>
+    <relation group_id="lolnetnzForum" display_order="3"/>
+  </option>
+</options>

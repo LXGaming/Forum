@@ -14,4 +14,14 @@
   <phrase title="minecraft_username_invalid_format" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[The Minecraft Username provided does not match the required format.]]></phrase>
   <phrase title="minecraft_username_invalid_length" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[The Minecraft Username provided does not match the required length.]]></phrase>
   <phrase title="minecraft_username_invalid_name" version_id="1000010" version_string="1.0.0 Alpha"><![CDATA[The Minecraft Username provided is not valid]]></phrase>
+  <phrase title="option.lolnetnzForumRedisEnabled" version_id="1010170" version_string="1.1.1"><![CDATA[Redis Enabled]]></phrase>
+  <phrase title="option.lolnetnzForumRedisHost" version_id="1010170" version_string="1.1.1"><![CDATA[Redis Host]]></phrase>
+  <phrase title="option.lolnetnzForumRedisPassword" version_id="1010170" version_string="1.1.1"><![CDATA[Redis Password]]></phrase>
+  <phrase title="option.lolnetnzForumRedisPort" version_id="1010170" version_string="1.1.1"><![CDATA[Redis Port]]></phrase>
+  <phrase title="option_explain.lolnetnzForumRedisEnabled" version_id="1010170" version_string="1.1.1"><![CDATA[]]></phrase>
+  <phrase title="option_explain.lolnetnzForumRedisHost" version_id="1010170" version_string="1.1.1"><![CDATA[]]></phrase>
+  <phrase title="option_explain.lolnetnzForumRedisPassword" version_id="1010170" version_string="1.1.1"><![CDATA[]]></phrase>
+  <phrase title="option_explain.lolnetnzForumRedisPort" version_id="1010170" version_string="1.1.1"><![CDATA[]]></phrase>
+  <phrase title="option_group.lolnetnzForum" version_id="1010170" version_string="1.1.1"><![CDATA[Forum]]></phrase>
+  <phrase title="option_group_description.lolnetnzForum" version_id="1010170" version_string="1.1.1"><![CDATA[Lolnet - Forum addon options]]></phrase>
 </phrases>
