@@ -21,13 +21,13 @@ class RedisIntegration {
             return true;
         }
 
-        $options = XF::app()->options();
+        $options = \XF::app()->options();
         if (!$options->lolnetnzForumRedisEnabled) {
             return false;
         }
 
         if (!extension_loaded("redis")) {
-            XF::logError("Missing redis extension");
+            \XF::logError("Missing redis extension");
             return false;
         }
 
@@ -44,7 +44,7 @@ class RedisIntegration {
             self::$redis = $redis;
             return true;
         } catch (RedisException $ex) {
-            XF::logException($ex);
+            \XF::logException($ex);
             return false;
         }
     }
