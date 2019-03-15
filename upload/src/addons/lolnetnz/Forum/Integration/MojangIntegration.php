@@ -1,12 +1,12 @@
 <?php
 
-namespace lolnetnz\Forum\Util;
+namespace lolnetnz\Forum\Integration;
 
-class Mojang {
+class MojangIntegration {
 
-    protected static $profiles = 100;
+    private static $profiles = 100;
 
-    protected function _post($data) {
+    private static function _post($data) {
         $data = json_encode($data);
 
         $options = array(
@@ -21,32 +21,32 @@ class Mojang {
         return json_decode(file_get_contents("https://api.mojang.com/profiles/minecraft", false, $context), true);
     }
 
-    public function getUUIDsByNames($names) {
+    public static function getUUIDsByNames($names) {
         if (!names) {
             return false;
         }
 
         $count = count($names);
-        $pages = ceil($count / $this::$profiles);
+        $pages = ceil($count / self::$profiles);
         $array = array();
 
         for ($page = 0; $page < $pages; $page++) {
-            $index = ($page * $this::$profiles);
-            $fetchNames = array_slice($names, $index, $this::$profiles);
+            $index = ($page * self::$profiles);
+            $fetchNames = array_slice($names, $index, self::$profiles);
 
-            $data = $this->_post($fetchNames);
+            $data = self::_post($fetchNames);
             $array = array_merge($array, $data);
         }
 
         return $array;
     }
 
-    public function getUUIDByName($name) {
+    public static function getUUIDByName($name) {
         if (!$name) {
             return false;
         }
 
-        $results = $this::_post(array($name));
+        $results = self::_post(array($name));
         if (!isset($results[0]["id"])) {
             return false;
         }
@@ -54,7 +54,7 @@ class Mojang {
         return $results[0]["id"];
     }
 
-    public function getNameByUUID($uuid) {
+    public static function getNameByUUID($uuid) {
         if (!$uuid) {
             return false;
         }

@@ -2,7 +2,7 @@
 
 namespace lolnetnz\Forum;
 
-use lolnetnz\Forum\Util\Mojang;
+use lolnetnz\Forum\Integration\MojangIntegration;
 
 class Callback {
 
@@ -52,9 +52,7 @@ class Callback {
             return false;
         }
 
-        $mojang = new Mojang();
-        $uniqueId = $mojang->getUUIDByName($value);
-
+        $uniqueId = MojangIntegration::getUUIDByName($value);
         if (!$uniqueId) {
             $error = \XF::phrase($definition->field_id . "_invalid_name");
             return false;
