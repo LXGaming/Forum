@@ -11,8 +11,8 @@ class Registration extends XFCP_Registration {
 
         $user = $this->user;
         $data["username"] = $user->username;
-        if (!empty($user->Profile->CustomFields["minecraft_username"])) {
-            $data["minecraft_username"] = $user->Profile->CustomFields["minecraft_username"];
+        if (!empty($user->Profile->custom_fields["minecraft_username"])) {
+            $data["minecraft_username"] = $user->Profile->custom_fields["minecraft_username"];
         }
 
         $message["id"] = "forum:registration";

@@ -32,8 +32,8 @@ class PayPal extends XFCP_PayPal {
 
         $purchaser = $state->getPurchaser();
         $data["username"] = $purchaser->username;
-        if (!empty($purchaser->Profile->CustomFields["minecraft_unique_id"])) {
-            $data["minecraft_unique_id"] = $purchaser->Profile->CustomFields["minecraft_unique_id"];
+        if (!empty($purchaser->Profile->custom_fields["minecraft_unique_id"])) {
+            $data["minecraft_unique_id"] = $purchaser->Profile->custom_fields["minecraft_unique_id"];
         }
 
         $data["result"] = $state->paymentResult;
