@@ -19,19 +19,27 @@ class PayPal extends XFCP_PayPal {
 
         if ($state->legacy) {
             $purchaseRequest = null;
-            $message["item"] = $state->userUpgrade->title;
-            $message["cost"] = $state->userUpgrade->cost_amount;
-            $message["currency"] = $state->userUpgrade->cost_currency;
+            $data["item"] = $state->userUpgrade->title;
+            $data["cost"] = $state->userUpgrade->cost_amount;
+            $data["currency"] = $state->userUpgrade->cost_currency;
         } else {
             $purchaseRequest = $state->getPurchaseRequest();
-            $message["item"] = $purchaseRequest->Purchasable->title;
-            $message["cost"] = $purchaseRequest->cost_amount;
-            $message["currency"] = $state->userUpgrade->cost_currency;
+            $data["item"] = $purchaseRequest->Purchasable->title;
+            $data["cost"] = $purchaseRequest->cost_amount;
+            $data["currency"] = $state->userUpgrade->cost_currency;
         }
 
-        $message["username"] = $state->getPurchaser()->username;
-        $message["result"] = $state->paymentResult;
+        $purchaser = $state->getPurchaser();
+        $data["username"] = $purchaser->username;
+        if (!empty($purchaser->Profile->CustomFields["minecraft_unique_id"])) {
+            $data["minecraft_unique_id"] = $purchaser->Profile->CustomFields["minecraft_unique_id"];
+        }
 
+        $data["result"] = $state->paymentResult;
+        $data["provided"] = getTitle();
+
+        $message["id"] = "xenforo:payment";
+        $message["data"] = $data;
         RedisIntegration::publish(json_encode($message));
     }
 }

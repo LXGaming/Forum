@@ -10,10 +10,13 @@ class Registration extends XFCP_Registration {
         parent::sendRegistrationContact();
 
         $user = $this->user;
-        $message["username"] = $user->username;
+        $data["username"] = $user->username;
         if (!empty($user->Profile->CustomFields["minecraft_username"])) {
-            $message["minecraft_username"] = $user->Profile->CustomFields["minecraft_username"];
+            $data["minecraft_username"] = $user->Profile->CustomFields["minecraft_username"];
         }
+
+        $message["id"] = "xenforo:registration";
+        $message["data"] = $data;
 
         RedisIntegration::publish(json_encode($message));
     }
