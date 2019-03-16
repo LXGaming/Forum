@@ -12,7 +12,7 @@ class RedisIntegration {
             return;
         }
 
-        self::instance()->publish("xenforo", $message);
+        self::instance()->publish("forum", $message);
         self::instance()->close();
     }
 

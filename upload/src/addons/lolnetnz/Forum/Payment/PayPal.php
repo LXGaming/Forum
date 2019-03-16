@@ -37,9 +37,9 @@ class PayPal extends XFCP_PayPal {
         }
 
         $data["result"] = $state->paymentResult;
-        $data["provided"] = getTitle();
+        $data["provider"] = getTitle();
 
-        $message["id"] = "xenforo:payment";
+        $message["id"] = "forum:payment";
         $message["data"] = $data;
         RedisIntegration::publish(json_encode($message));
     }

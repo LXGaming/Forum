@@ -15,7 +15,7 @@ class Registration extends XFCP_Registration {
             $data["minecraft_username"] = $user->Profile->CustomFields["minecraft_username"];
         }
 
-        $message["id"] = "xenforo:registration";
+        $message["id"] = "forum:registration";
         $message["data"] = $data;
 
         RedisIntegration::publish(json_encode($message));
