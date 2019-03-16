@@ -32,7 +32,7 @@ class RedisIntegration {
         }
 
         try {
-            $redis = new Redis();
+            $redis = new \Redis();
             if (!$redis->connect($options->lolnetnzForumRedisHost, $options->lolnetnzForumRedisPort, self::$timeout)) {
                 return false;
             }
@@ -43,7 +43,7 @@ class RedisIntegration {
 
             self::$redis = $redis;
             return true;
-        } catch (RedisException $ex) {
+        } catch (\RedisException $ex) {
             \XF::logException($ex);
             return false;
         }
