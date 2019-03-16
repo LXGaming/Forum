@@ -4,6 +4,7 @@ namespace lolnetnz\Forum\Payment;
 
 use lolnetnz\Forum\Integration\RedisIntegration;
 use XF\Entity\PurchaseRequest;
+use XF\Payment\CallbackState;
 use XF\Purchasable\Purchase;
 
 class PayPal extends XFCP_PayPal {
