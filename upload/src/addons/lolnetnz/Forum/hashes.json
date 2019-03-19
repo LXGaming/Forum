@@ -1,5 +1,5 @@
 {
-    "src/addons/lolnetnz/Forum/addon.json": "158b6dbcb4d12ef2e0d86277761a42816eb445e80b7383b678a7afccf992d798",
+    "src/addons/lolnetnz/Forum/addon.json": "608fa83d72941e2dfcc1f23cb8dbbfaa453cad8d70a1bdfeaf19c53b6fa6aa5f",
     "src/addons/lolnetnz/Forum/Callback.php": "6fde0cf2a6d13b42b7a1d999f6c8fb3ba31adb87a0844ee2903f338eb27ffcd2",
     "src/addons/lolnetnz/Forum/ConnectedAccount/Provider/Discord.php": "624dacf7165368525075c2040cdbf7396f868b43cf1715a968ea72efe7731fcf",
     "src/addons/lolnetnz/Forum/ConnectedAccount/ProviderData/Discord.php": "afec149a8d99efb253c2956d2f07d94a6b071b02dad2c02caceafeb35a697261",
@@ -7,7 +7,7 @@
     "src/addons/lolnetnz/Forum/Integration/MojangIntegration.php": "985f3188c4fdd688cbb53e6ac1c1860863516edc710f206623835b2d0830b389",
     "src/addons/lolnetnz/Forum/Integration/RedisIntegration.php": "2410fff17cadee8057ced4592a7d9a558a4b932eb93cb6e88ea896b4df8b5f90",
     "src/addons/lolnetnz/Forum/logo.png": "02df2795513152cac3ef2eea2053cebc12d29809d1d2999c58c53847e6120338",
-    "src/addons/lolnetnz/Forum/Payment/PayPal.php": "fca92a107e64c5ecf2ea12edf7caae5dcabf3c3d7e4378096bfef5bdabb9b509",
+    "src/addons/lolnetnz/Forum/Payment/PayPal.php": "1392250256c2ccd9f958da76ca75afd9a64dcc700a7ba972cb96069ed2debbec",
     "src/addons/lolnetnz/Forum/Service/User/Registration.php": "62f37257f26eaec2df4fa44565b90191e16804673e2374c8fab31ab2ddc8037f",
     "src/addons/lolnetnz/Forum/Setup.php": "cb13db3b22eb8b637f63f38a5ca2940e99f3a6ae36bdc08d31ae137f073ad4d2",
     "src/addons/lolnetnz/Forum/_data/admin_navigation.xml": "064ec797484ac00d5ee37367b50b06846d11f480d00550997712707f8fdac8c0",

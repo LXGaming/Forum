@@ -27,7 +27,7 @@ class PayPal extends XFCP_PayPal {
             $purchaseRequest = $state->getPurchaseRequest();
             $data["item"] = $purchaseRequest->Purchasable->title;
             $data["cost"] = $purchaseRequest->cost_amount;
-            $data["currency"] = $state->userUpgrade->cost_currency;
+            $data["currency"] = $purchaseRequest->cost_currency;
         }
 
         $purchaser = $state->getPurchaser();
@@ -37,7 +37,7 @@ class PayPal extends XFCP_PayPal {
         }
 
         $data["result"] = $state->paymentResult;
-        $data["provider"] = getTitle();
+        $data["provider"] = $this->getTitle();
 
         $message["id"] = "forum:payment";
         $message["data"] = $data;
