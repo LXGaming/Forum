@@ -32,8 +32,9 @@ class PayPal extends XFCP_PayPal {
 
         $purchaser = $state->getPurchaser();
         $data["username"] = $purchaser->username;
-        if (!empty($purchaser->Profile->custom_fields["minecraft_unique_id"])) {
-            $data["minecraft_unique_id"] = $purchaser->Profile->custom_fields["minecraft_unique_id"];
+        $uniqueId = $purchaser->Profile->custom_fields["minecraft_unique_id"];
+        if (!empty($uniqueId)) {
+            $data["minecraft_unique_id"] = preg_replace("/(\w{8})(\w{4})(\w{4})(\w{4})(\w{12})/i", "$1-$2-$3-$4-$5", $uniqueId);
         }
 
         $data["result"] = $state->paymentResult;
