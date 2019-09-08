@@ -25,7 +25,18 @@ class PayPal extends XFCP_PayPal {
             $data["currency"] = $state->userUpgrade->cost_currency;
         } else {
             $purchaseRequest = $state->getPurchaseRequest();
-            $data["item"] = $purchaseRequest->Purchasable->title;
+            $userUpgradeId = $purchaseRequest->extra_data["user_upgrade_id"];
+            if (isset($userUpgradeId)) {
+                $userUpgrade = \XF::em()->find("XF:UserUpgrade", $userUpgradeId);
+                if (isset($userUpgrade)) {
+                    $data["item"] = $userUpgrade->title;
+                } else {
+                    $data["item"] = $purchaseRequest->Purchasable->title;
+                }
+            } else {
+                $data["item"] = $purchaseRequest->Purchasable->title;
+            }
+
             $data["cost"] = $purchaseRequest->cost_amount;
             $data["currency"] = $purchaseRequest->cost_currency;
         }
